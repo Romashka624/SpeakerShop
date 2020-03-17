@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+    <div class="index_wrapper">
+        <div class="home_bg">
+            <img class="home_bg_img" src="~/images/home_bg.png" />
+            <div class="home_bg_content">
+                <form action="~/Views/Home/Index.cshtml" class="sing_up_form">
+                    <h1>Sing up</h1>
+                    <div class="sing_up_form_input">
+                        <input type="text" />
+                        <span data-placeholder="Name"></span>
+                    </div>
+                    <div class="sing_up_form_input">
+                        <input type="password" />
+                        <span data-placeholder="Password"></span>
+                    </div>
+                    <div class="sing_up_form_input">
+                        <input type="text" />
+                        <span data-placeholder="Email"></span>
+                    </div>
+                    <input type="submit" value="Sing up" class="submit_btn">
+                </form>
+            </div>
+        </div>
+
+        <script src="~/Scripts/script.js"></script>
+
+        <script type="text/javascript">
+
+            $(".sing_up_form_input input").on("focus", function () {
+                $(this).addClass("focus");
+            });
+
+            $(".sing_up_form_input input").on("blur", function () {
+                if ($(this).val() == "")
+                    $(this).removeClass("focus");
+            });
+        </script>
+
+    </div>
+   

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<string>
+
+
+
+@Html.ActionLink("All category", "ShowProduct", "Home", null, new { @class = "side_category_home" })
+
+@foreach (var category in Model)
+{
+    @Html.ActionLink(category, "ShowProduct", "Home", new { category = category, SortProduct = ViewBag.SortPr, Page = 1 },
+   new { @class = (category == ViewBag.SelectedCategory ? "side_category_selectedcategories" : "side_category_categories") })
+}
+<div class="dropdown">
+    <button class="drop_button">
+        Sort by
+    </button>
+    <div class="dropdown_content">
+        <div class="dropdown_content_inner">
+            @Html.ActionLink("Price low", "ShowProduct", "Home", new { SortProduct = "pricelow", category = ViewBag.SelectedCategory }, new { @class = ( ViewBag.SortPr == "pricelow" ? "side_category_sort_selected" : "side_category_sort") })
+            @Html.ActionLink("Price hight", "ShowProduct", "Home", new { SortProduct = "pricehight", category = ViewBag.SelectedCategory }, new { @class = ( ViewBag.SortPr == "pricehight" ? "side_category_sort_selected" : "side_category_sort") })
+            @Html.ActionLink("Battery capacity low", "ShowProduct", "Home", new { SortProduct = "battery_capacitylow", category = ViewBag.SelectedCategory }, new { @class = ( ViewBag.SortPr == "battery_capacitylow" ? "side_category_sort_selected" : "side_category_sort") })
+            @Html.ActionLink("Battery capacity hight", "ShowProduct", "Home", new { SortProduct = "battery_capacityhight", category = ViewBag.SelectedCategory }, new { @class = ( ViewBag.SortPr == "battery_capacityhight" ? "side_category_sort_selected" : "side_category_sort") })
+            @Html.ActionLink("Power low", "ShowProduct", "Home", new { SortProduct = "powerlow", category = ViewBag.SelectedCategory }, new { @class = ( ViewBag.SortPr == "powerlow" ? "side_category_sort_selected" : "side_category_sort") })
+            @Html.ActionLink("Power hight", "ShowProduct", "Home", new { SortProduct = "powerhight", category = ViewBag.SelectedCategory }, new { @class = ( ViewBag.SortPr == "powerhight" ? "side_category_sort_selected" : "side_category_sort") })
+            @Html.ActionLink("Weight low", "ShowProduct", "Home", new { SortProduct = "weightlow", category = ViewBag.SelectedCategory }, new { @class = ( ViewBag.SortPr == "weightlow" ? "side_category_sort_selected" : "side_category_sort") })
+            @Html.ActionLink("Weight hight", "ShowProduct", "Home", new { SortProduct = "weighthight", category = ViewBag.SelectedCategory }, new { @class = ( ViewBag.SortPr == "weighthight" ? "side_category_sort_selected" : "side_category_sort") })
+        </div>
+    </div>
+</div>

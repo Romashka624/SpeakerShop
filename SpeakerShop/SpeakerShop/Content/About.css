@@ -1,0 +1,6 @@
+﻿.about_wrapper {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 20px 0;
+    min-height: calc(100vh - 90px);
+}

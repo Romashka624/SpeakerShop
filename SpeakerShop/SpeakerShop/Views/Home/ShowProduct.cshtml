@@ -1,0 +1,43 @@
+﻿@using SpeakerShop.Models
+@using SpeakerShop.HtmlHelpers
+@model PageList
+@{
+    ViewBag.Title = "Product";
+}
+
+<div class="wrapper_product">
+    <div class="row">
+        <div class="side">
+            @Html.Action("ShowCategories", "Home")
+        </div>
+        <div class="main">
+            <div class="main_grid">
+                @foreach (var b in Model.Speakers)
+                {
+                    <div class="main_grid_cell">
+                        <div class="main_grid_cell_content">
+                            <div class="content_img">
+                                <img class="content__img" src="~/images/@b.Img" alt="">
+                            </div>
+                            <div class="content_text">
+                                <span class="content_text_items">@b.BrandName</span>
+                                <span class="content_text_items">@b.Model</span>
+                                <div class="content_text_prise">
+                                    <span >Price @b.Price $</span>
+                                </div>
+                            </div>
+                            <div class="cont_btns">
+                                @Html.ActionLink("Details", "ShowSpeakerdetails", "Home", new { id = b.Id }, new { @class = "btn_sp_det" })
+                                @Html.ActionLink("Add to cart", "AddToCart", "Home", new { id = b.Id }, new { @class = "btn_cart" })
+                            </div>
+                        </div>
+                    </div>
+                    
+                }
+            </div>
+            <div class="pages_link">
+                @Html.PageLinks(Model.pageInfo, x => Url.Action("ShowProduct", new { category = Model.Currentcategory, SortProduct = Model.SortCat, Page = x }))
+            </div>
+        </div>
+    </div>
+</div>

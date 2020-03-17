@@ -1,0 +1,76 @@
+﻿@model IEnumerable<SpeakerShop.Models.Speaker>
+
+@{
+    ViewBag.Title = "Editing";
+}
+
+    <div class="wrapper_product_editing">
+        @Html.ActionLink("Add new speaker", "Create", "Home", null, new { @class = "add_new" })
+
+        @using (Html.BeginForm())
+        {
+            <div class="search">
+                <span>Find by brand:</span> @Html.TextBox("SearchString", null, new { @class = "search_string" })
+                <input type="submit" value="Search" />
+            </div>
+        }
+        <div class="product_editing_content">
+
+            @foreach (SpeakerShop.Models.Speaker b in Model)
+            {
+                <div class="product_editing_row">
+                    <div class="product_editing_row_img">
+                        <img src="~/images/@b.Img" alt="" class="product_editing_row_content_img" />
+                    </div>
+                    <div class="product_editing_row_content">
+                        <div class="product_editing_row_content_top">
+                            <div class="product_editing_row_content_wrapper_top">
+                                <span class="content_category">Category</span>
+                                <span class="content_brand">Brand</span>
+                                <span class="content_model">Model</span>
+                                <span class="content_price">Price</span>
+                                <span class="content_acoustics_format">Acoustics Format</span>
+                                <span class="content_frequency_range">Frequency Range</span>
+                                <span class="content_protection">Protection</span>
+                            </div>
+                            <div class="product_editing_row_content_wrapper_bottom">
+                                <span class="content_category">@b.SpeakerCategory</span>
+                                <span class="content_brand">@b.BrandName</span>
+                                <span class="content_model">@b.Model</span>
+                                <span class="content_price">@b.Price $</span>
+                                <span class="content_acoustics_format">@b.AcousticsFormat</span>
+                                <span class="content_frequency_range">@b.FrequencyRange Hz</span>
+                                <span class="content_protection">@b.Protection</span>
+                            </div>
+                        </div>
+                        <div class="product_editing_row_content_bottom">
+                            <div class="product_editing_row_content_wrapper_top">
+                                <span class="content_battery_capacity">Battery Capaсity</span>
+                                <span class="content_power">Power</span>
+                                <span class="content_avaliable">Avaliable</span>
+                                <span class="content_color">Color</span>
+                                <span class="content_dimensions">Dimensions</span>
+                                <span class="content_weight">Weight</span>
+                                <span class="content_kit">Kit</span>
+                                <span class="content_guarantee">Guarantee</span>
+                            </div>
+                            <div class="product_editing_row_content_wrapper_bottom">
+                                <span class="content_battery_capacity">@b.BatteryCapaсity MAh</span>
+                                <span class="content_power">@b.Power W</span>
+                                <span class="content_avaliable">@b.Avaliable Pieсes</span>
+                                <span class="content_color">@b.Color</span>
+                                <span class="content_dimensions">@b.Dimensions MM</span>
+                                <span class="content_weight">@b.Weight g</span>
+                                <span class="content_kit">@b.Kit</span>
+                                <span class="content_guarantee">@b.Guarantee Month</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_editing_row_button">
+                        @Html.ActionLink("Edit", "Edit", "Home", new { speakerid = @b.Id }, new { @class = "product_edit_buttons" })
+                        @Html.ActionLink("Delete", "Delete", "Home", new { speakerid = @b.Id }, new { @class = "product_delete_buttons" })
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

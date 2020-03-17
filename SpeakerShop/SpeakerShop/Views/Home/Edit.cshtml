@@ -1,0 +1,122 @@
+﻿@model SpeakerShop.Models.Speaker
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Edit", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="wrapper_edit">
+        <div class="edit_content">
+            <div class="edit_content_img">
+                <img src="~/images/@Model.Img" alt="" id="edit_img" class="edit_image" />
+            </div>
+            <div class="input_img">
+                <label for="image_uploads">Choose image to upload</label>
+                <input class="class_input" type="file" name="uploadFile" id="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+            </div>
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.Img)
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Category</span>
+                </div>
+                @Html.EditorFor(model => model.SpeakerCategory, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Brand</span>
+                </div>
+                @Html.EditorFor(model => model.BrandName, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Model</span>
+                </div>
+                @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>AcousticsFormat</span>
+                </div>
+                @Html.EditorFor(model => model.AcousticsFormat, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Avaliable</span>
+                </div>
+                @Html.EditorFor(model => model.Avaliable, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Color</span>
+                </div>
+                @Html.EditorFor(model => model.Color, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Dimensions</span>
+                </div>
+                @Html.EditorFor(model => model.Dimensions, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Kit</span>
+                </div>
+                @Html.EditorFor(model => model.Kit, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Price</span>
+                </div>
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Weight</span>
+                </div>
+                @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Protection</span>
+                </div>
+                @Html.EditorFor(model => model.Protection, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Power</span>
+                </div>
+                @Html.EditorFor(model => model.Power, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>BatteryCapaсity</span>
+                </div>
+                @Html.EditorFor(model => model.BatteryCapaсity, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>FrequencyRange</span>
+                </div>
+                @Html.EditorFor(model => model.FrequencyRange, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <div class="edit_item">
+                <div class="edit_item_span_dotted">
+                    <span>Guarantee</span>
+                </div>
+                @Html.EditorFor(model => model.Guarantee, new { htmlAttributes = new { @class = "edit_editorfor" } })
+            </div>
+            <script src="~/Scripts/edit.js" type="text/javascript"></script>
+        </div>
+            @Html.ActionLink("Cancel", "ProductEditing", null, new { @class = "edit_cancel" })
+            <input type="submit" value="Save changes" class="edit_item_save" />
+    </div>
+}
+
+
+
+

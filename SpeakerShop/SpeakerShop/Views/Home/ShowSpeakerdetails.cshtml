@@ -1,0 +1,164 @@
+﻿@model IEnumerable<SpeakerShop.Models.Speaker>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+    <div class="wrapper_product_details">
+
+
+       @foreach (SpeakerShop.Models.Speaker b in Model)
+       {
+           <div class="showspeakerdetail_content">
+               <div class="showspeakerdetail_content_top">
+                   <div class="showspeakerdetail_content_left">
+                       <img class="showspeakerdetail_content_img" src="~/images/@b.Img" alt="@b.Model" />
+                   </div>
+                   <div class="showspeakerdetail_content_right">
+                       <div class="content_right_model">
+                           <span>Speaker system</span>
+                           <span>@b.BrandName</span>
+                           <span>@b.Model</span>
+                       </div>
+                       <div class="content_right_price">
+                           <span>Price: @b.Price $</span>
+                       </div>
+                       <div class="content_right_in_stock">
+                           <img class="content_right_img" src="~/images/icons/check.png" alt="">
+                           <span>@b.Avaliable Pieces in stock</span>
+                       </div>
+                       <div class="content_right_add_to_cart">
+                           @Html.ActionLink("Add to cart", "AddToCart", "Home", new { id = b.Id }, new { @class = "btn_cart" })
+                       </div>
+                   </div>
+               </div>
+               <div class="showspeakerdetail_content_bottom">
+                   <div class="showspeakerdetail_characteristics">
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>BrandName</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.BrandName</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>Model</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.Model</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>AcousticsFormat</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.AcousticsFormat</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>FrequencyRange</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.FrequencyRange Hz</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>Protection</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.Protection</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>BatteryCapaсity</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.BatteryCapaсity MAh</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>Power</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.Power W</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>Color</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.Color</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>Dimensions</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.Dimensions MM</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>Weight</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.Weight g</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>Kit</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.Kit</span>
+                           </div>
+                       </div>
+                       <div class="showspeakerdetail_characteristics_row">
+                           <div class="characteristics_row_left">
+                               <div class="characteristics_row_left_dotted">
+                                   <span>Guarantee</span>
+                               </div>
+                           </div>
+                           <div class="characteristics_row_right">
+                               <span>@b.Guarantee Month</span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       }
+
+    </div>

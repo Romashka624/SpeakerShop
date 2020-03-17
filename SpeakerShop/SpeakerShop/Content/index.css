@@ -1,0 +1,113 @@
+﻿.index_wrapper {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.home_bg{
+    width: 1300px;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    height: 1005px;
+}
+
+.home_bg_img{
+    width: 1300px;
+}
+
+.home_bg_content{
+    position: absolute;
+    width: 1300px;
+    height: 513px;
+    bottom: 0;
+    left: 0;
+}
+
+.sing_up_form {
+    height: 400px;
+    width: 250px;
+    overflow: hidden;
+    background: none;
+    padding: 20px 0px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .sing_up_form h1 {
+        margin: 0;
+        color: #adadad;
+        text-align: center;
+    }
+
+    .sing_up_form_input {
+        border: 1px solid #C2C2C2;
+        border-radius: 5px;
+        position: relative;
+        margin-top: 35px;
+        width: 250px;
+    }
+
+    .sing_up_form_input input {
+        font-size: 15px;
+        color: #adadad;
+        border: none;
+        width: 100%;
+        outline: none;
+        background: none;
+        padding: 0 5px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .sing_up_form_input span::before {
+        content: attr(data-placeholder);
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 7px;
+        color: #adadad;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: .5s;
+    }
+
+    .sing_up_form_input span::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+    }
+
+.focus + span::before {
+    top: -20px;
+}
+
+.focus + span::after {
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+.submit_btn {
+    display: block;
+    width: 200px;
+    height: 30px;
+    margin: 35px auto;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    color: #adadad;
+    font-size: 13px;
+    background: none;
+}
+
+    .submit_btn:hover {
+        background-color: #adadad;
+        color: #122538;
+        cursor: pointer;
+        border-color: #FFFFFF;
+    }
+
+    

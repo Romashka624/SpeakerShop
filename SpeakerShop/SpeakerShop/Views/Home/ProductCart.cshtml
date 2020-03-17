@@ -1,0 +1,52 @@
+﻿@model IEnumerable<SpeakerShop.Models.Cart>
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="wrapper_cart">
+        @if (ViewBag.SumPrice != 0)
+        {
+            
+            foreach (SpeakerShop.Models.Cart b in Model)
+            {
+                <div class="cart_cell">
+                    <div class="cart_left">
+                        <div class="cart_img">
+                            <img src="~/images/@b.CartImg" alt="" />
+                        </div>
+                        <div class="cart_text">
+                            <span class="cart_brand">@b.CartBrand</span>
+                            <span class="cart_model">@b.CartModel</span>
+                            <span class="cart_color">  @b.CartColor </span>
+                        </div>
+                    </div>
+                    <div class="cart_right">
+                        <div class="cart_price">
+                            <span>Price: @b.CartPrice $</span>
+                        </div>
+                        <div class="cart_delete">
+                            @Html.ActionLink("Delete", "DeleteFromCart", "Home", new { id = @b.Id }, new { @class = "cart_delete_buttons" })
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="cart_paing">
+                <div class="cart_total">
+                    <span>Total price: @ViewBag.SumPrice $</span>
+                </div>
+                <div class="cart_pay">
+                    @Html.ActionLink("Pay now", "PayNowCart", "Home", new { @class = "cart_pay_buttons" })
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="cart_empty">
+                <span>Your cart is empty</span>
+            </div>
+        }
+
+    </div>
+

@@ -1,0 +1,341 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,span,a,button{
+    font-family: Montserrat-Regular;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f0f2f5;
+}
+
+.wrapper {
+    width: 1300px;
+    margin: 0 auto;
+    background-color: #122538;
+    
+}
+
+/*--------------------------------HEADER BEGIN---------------------------------------------*/
+
+header {
+    background-color: #122538;
+}
+
+.header_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 45px;
+    padding-bottom: 5px;
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #adadad;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+.menu_link {
+    text-decoration: none;
+    color: #adadad;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+    .menu_link:hover {
+        color: #FFFFFF;
+    }
+
+.header_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 45px;
+}
+
+
+.editing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 45px;
+}
+
+.header_button_editing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 20px;
+    border: 1px solid #bdc0c7;
+    border-radius: 5px;
+    background: none;
+    font-size: 14px;
+    color: #adadad;
+}
+
+    .header_button_editing:hover {
+        color: black;
+        border-color: red;
+        background-color: white;
+    }
+
+.header_sing_in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 45px;
+}
+
+.button_sing_in{
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #adadad;
+}
+
+.button_sing_in:hover{
+    color: #FFFFFF;
+}
+
+.shopping_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+.shopping_cart_img {
+    width: 27px;
+    height: 27px;
+}
+
+    .shopping_cart_img:hover {
+        width: 30px;
+        height: 30px;
+    }
+
+/*----------------------------------------HEADER END---------------------------------------------*/
+
+
+
+/*-----------------------------------------FOOTER BEGIN------------------------------------------*/
+
+footer {
+    background-color: #122538;
+    margin: 0px;
+}
+
+.footer_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+
+.visa_mastercart {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 225px;
+}
+
+.visa_mastercart_img {
+    height: 30px;
+    width: 90px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 17px;
+    color: #adadad;
+}
+
+.footer_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+.footer_link_img {
+    width: 27px;
+    height: 27px;
+}
+
+    .footer_link_img:hover {
+        width: 30px;
+        height: 30px;
+    }
+
+/*-----------------------------------------FOOTER END------------------------------------------*/
+
+/*-----------------------------------------SING IN FORM BEGIN------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.lgg {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+.login-form {
+    overflow: hidden;
+    width: 360px;
+    background-color: black;
+    height: 580px;
+    padding: 80px 40px;
+    border: 3px solid #C2C2C2;
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .login-form h1 {
+        margin-bottom: 60px;
+        color: #adadad;
+        text-align: center;
+    }
+
+.txtb {
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 35px;
+    width: 280px;
+}
+
+    .txtb input {
+        font-size: 15px;
+        color: #adadad;
+        border: none;
+        width: 100%;
+        outline: none;
+        background: none;
+        padding: 0 5px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .txtb span::before {
+        content: attr(data-placeholder);
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        color: #adadad;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: .5s;
+    }
+
+    .txtb span::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+    }
+
+.focus + span::before {
+    top: -5px;
+}
+
+.focus + span::after {
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+.logbtn {
+    display: block;
+    width: 200px;
+    height: 30px;
+    margin: 35px auto;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    color: #adadad;
+    font-size: 13px;
+    background: none;
+}
+
+    .logbtn:hover {
+        background-color: #adadad;
+        color: #122538;
+        cursor: pointer;
+    }
+
+.bottom-text {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #adadad;
+}
+
+    .bottom-text a {
+        font-size: 14px;
+        color: #adadad;
+    }
+
+        .bottom-text a:hover {
+            color: #FFFFFF;
+            border-color: #FFFFFF;
+        }
+/*-----------------------------------------SING IN FORM END--------------------------------------------*/
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

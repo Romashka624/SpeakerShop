@@ -1,0 +1,139 @@
+﻿.wrapper_edit {
+    width: 1300px;
+    margin: 20px auto;
+    padding: 20px 0;
+    border: 1px solid #bdc0c7;
+    background-color: #FFFFFF;
+    min-height: calc(100vh - 90px);
+}
+
+.edit_content {
+    width: 1300px;
+}
+
+.edit_content_img {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+    border-color: #bdc0c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit_image {
+    max-width: 490px;
+    max-height: 490px;
+}
+
+.input_img {
+    margin: 0 400px 20px 400px;
+    width: 500px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.class_input {
+    display: none;
+}
+
+.input_img label {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 400px;
+    border: 3px solid;
+    border-color: #bdc0c7;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+}
+
+    .input_img label:hover {
+        background-color: #122538;
+        color: #adadad;
+        cursor: pointer;
+    }
+
+.edit_item {
+    margin: 0 auto;
+    height: 30px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit_item_span_dotted {
+    width: 150px;
+    padding: 0;
+    margin: 0 5px 0 0;
+    list-style-type: none;
+    height: 14px;
+    border-bottom: 1px dotted #C2C2C2;
+}
+
+    .edit_item_span_dotted span {
+        background-color: #FFF;
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+        bottom: -5px;
+    }
+
+.edit_editorfor {
+    display: block;
+    height: 20px;
+    font-size: 13px;
+    width: 350px;
+}
+
+.edit_cancel {
+    margin: 20px 450px 20px 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 400px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+    border: 3px solid;
+    border-color: #bdc0c7;
+    border-radius: 5px;
+    color: black;
+}
+
+    .edit_cancel:hover {
+        background-color: #122538;
+        color: #adadad;
+        cursor: pointer;
+    }
+
+.edit_item_save {
+    margin: 0 450px 0 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 400px;
+    border: 3px solid;
+    border-color: #bdc0c7;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+}
+
+    .edit_item_save:hover {
+        background-color: red;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
